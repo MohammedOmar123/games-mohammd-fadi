@@ -8,6 +8,7 @@ const router = require('./routes');
 
 const app = express();
 
+app.set('port', process.env.PORT || 3000);
 app.use(compression());
 app.use(helmet());
 app.use(express.json());
