@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src ; 
+img-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; 
+style-src  'self' 'unsafe-inline' img-src 'self' data:image/svg+xml *">
     <link rel="stylesheet" href="./home/styles.css">
+
     <title>Steem Games</title>
 </head>
 
 <body>
     <label for="search">Search</label>
-    <img src="https://www.freetogame.com/g/517/thumbnail.jpg" alt="img">
+    <img class="img" src="https://www.freetogame.com/g/517/thumbnail.jpg" alt="img">
     <input type="text" name="search" id="search">
     <button id="send">Submit</button>
     <script src="./home/index.js"></script>
