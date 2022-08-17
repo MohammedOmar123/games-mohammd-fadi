@@ -1,3 +1,4 @@
 const getGamesFromCategory = require('./getGamesFromCategory');
+const getSearchValue = require('./search');
 
-module.exports = { getGamesFromCategory };
+module.exports = { getGamesFromCategory, getSearchValue };

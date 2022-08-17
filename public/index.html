@@ -11,9 +11,24 @@
 
 <body>
     <label for="search">Search</label>
-    <img class="img" src="http://www.freetogame.com/g/517/thumbnail.jpg" alt="img">
-    <input type="text" name="search" id="search">
+    <input list="games" class="search-input" type="text" name="search" id="search">
     <button id="send">Submit</button>
+    <datalist id="games">
+
+    </datalist>
+
+    <section class="Games-categories">
+        <section class="shooter">
+            <h2>Shooter</h2>
+        </section>
+        <section class="strategy">
+            <h2>Strategy</h2>
+        </section>
+        <section class="racing">
+            <h2>Racing</h2>
+        </section>
+    </section>
+    
     <script src="./home/index.js"></script>
 </body>
 
