@@ -1,13 +1,11 @@
 const searchBar = document.querySelector('.search-input');
 const dataList = document.querySelector('#games');
-const searchBtn = document.querySelector('.send');
 
 const createOption = (data) => {
   const option = document.createElement('option');
   option.textContent = data.title;
   dataList.appendChild(option);
 };
-
 const printResults = (suggestionsList) => {
   suggestionsList.forEach((games, index) => {
     if (index < 6) {
@@ -32,12 +30,4 @@ const handelAutoComplete = ()=> {
       dataList.textContent = '';
       printResults(data);
     });
-};
-
-const handelSearchBtn = () => {
-  console.log("clicked");
-};
-
-searchBar.addEventListener('input', handelAutoComplete);
-
-searchBtn.addEventListener('click', handelSearchBtn);
+});
