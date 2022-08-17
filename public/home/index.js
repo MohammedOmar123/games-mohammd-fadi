@@ -9,7 +9,6 @@ const createOption = (data) => {
   option.textContent = data.title;
   dataList.appendChild(option);
 };
-
 const printResults = (suggestionsList) => {
   suggestionsList.forEach((games, index) => {
     if (index < 6) {
