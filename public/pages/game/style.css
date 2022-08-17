@@ -1,0 +1,114 @@
+/* The main container  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&family=Rubik+Dirt&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: rgb(18,18,18);
+}
+
+/* Beginning of header */
+.header{
+    height: 3.2rem;
+    background-color: rgb(42,42,42);
+    display: flex;
+    color: rgb(204,204,204);
+}
+.items {
+    padding: 1rem;
+}
+
+.items ul li  {
+    display: inline;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 1.3rem;
+}
+.items ul li a {
+    text-decoration: none;
+}
+.current-li{
+    color: rgb(52,120,246);
+    font-weight: bold;
+}
+
+/* End of header */
+
+/* Main Page Card */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(32,32,32);
+    border: 1px solid white;
+    border-radius: 2rem;
+    display: flex;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.big-pics{
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    display: flex;
+    justify-content: start;
+    padding: 3rem;
+    align-items: start;
+
+}
+
+.big-pics img {
+    width: 40rem;
+    height: 30rem;
+    border-radius: 2rem;
+}
+
+/* End of Main Page Card */
+
+/* Game Sections */
+.section-title{
+    color: white
+}
+
+.right-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 3rem;
+    color: white;
+    font-size: 1.3rem;
+    width: 100%;
+}
+
+.right-section p {
+    margin: 1rem;
+}
+
+.profile-btn {
+    display: inline;
+    background-color: rgb(52,120,246);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 3rem;
+    font-size: 1.2rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.game-btn{
+    background-color: rgb(52,120,246);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 3rem;
+    font-size: 1.2rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+/* End of Game Sections */
+
