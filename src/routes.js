@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const getHome = require('./controllers');
+const { getGamesFromCategory } = require('./controllers');
 
-router.get('/', getHome);
-
+router.get('/category/:categoryName', getGamesFromCategory);
 module.exports = router;

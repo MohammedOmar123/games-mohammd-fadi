@@ -1,3 +1,3 @@
-const getHome = require('./getHome');
+const getGamesFromCategory = require('./getGamesFromCategory');
 
-module.exports = getHome;
+module.exports = { getGamesFromCategory };
