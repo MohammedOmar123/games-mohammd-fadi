@@ -31,3 +31,4 @@ searchBar.addEventListener('input', () => {
       printResults(data);
     });
 });
+>>>>>>> cd5c4b342e37efcfba3d930e1a6d430d49bb0521
