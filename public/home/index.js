@@ -3,9 +3,9 @@ const dataList = document.querySelector('#games');
 const shooterSection = document.querySelector('.shooter');
 const strategySection = document.querySelector('.strategy');
 const racingSection = document.querySelector('.racing');
-const releaseSection = document.querySelector('.release-games');
+const rightSection = document.querySelector('.right-section');
 const searchBtn = document.querySelector('#send');
-
+console.log(rightSection);
 const createOption = (data) => {
   const option = document.createElement('option');
   option.textContent = data.title;
@@ -40,41 +40,44 @@ const handelAutoComplete = () => {
 searchBar.addEventListener('input', handelAutoComplete);
 
 
-const createGamesViews = (game,section) => {
+const createGamesViews = (game, section) => {
+  console.log(section);
   const div = document.createElement('div');
+  const aLink = document.createElement('a');
   const p = document.createElement('p');
   const img = document.createElement('img');
   // add content
   p.textContent = game.title;
   img.src = game.thumbnail;
-
+  aLink.href = `/game/${game.id}`;
   // add classes
-  div.classList.add('card');
 
   // appending
-  div.append(img, p);
+  aLink.append(img);
+  div.append(aLink,p);
   section.append(div);
+  
 };
-const requestGamesCategory = (categoryName, section) => {
-  fetch(`/category/${categoryName}`).then((data) => data.json()).then((games) => {
-    const data = games.slice(0, 7);
-    data.map((game) => {
-      createGamesViews(game, section);
-    });
-  });
-};
+// const requestGamesCategory = (categoryName, section) => {
+//   fetch(`/category/${categoryName}`).then((data) => data.json()).then((games) => {
+//     const data = games.slice(0, 7);
+//     data.map((game) => {
+//       createGamesViews(game, section);
+//     });
+//   });
+// };
 
-requestGamesCategory('strategy', strategySection);
-requestGamesCategory('shooter', shooterSection);
-requestGamesCategory('racing', racingSection);
+// requestGamesCategory('strategy', strategySection);
+// requestGamesCategory('shooter', shooterSection);
+// requestGamesCategory('racing', racingSection);
 
 const requestGamesByReleaseDate = (section) => {
   fetch('games/latestRelease').then((data) => data.json()).then((games) => {
-    const data = games.slice(0, 7);
+    const data = games.slice(0, 3);
     data.map((game) => {
       createGamesViews(game, section);
     });
   }).catch(console.log)
 };
 
-requestGamesByReleaseDate(releaseSection);
+requestGamesByReleaseDate(rightSection);
