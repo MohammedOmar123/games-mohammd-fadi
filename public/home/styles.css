@@ -1,18 +1,33 @@
-.Games-categories{
+/* The main container  */
+.Games-categories {
     display: flex;
-    flex-wrap: wrap;
-    border-color: 2px saddlebrown solid;
-    padding-left: 70px;
-    justify-content: flex-around;
-    margin-top: 30px;
+    border: 2px saddlebrown solid;
+    margin-top: 300px;
+    flex-direction: column;
 }
+
+/* for all games section */
+.games-section {
+    display: flex;
+}
+
 .card {
-width: 20%;
-margin: 10px;
+    width: 20%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .card img {
     width: 100%;
 }
-h2{
-    display: block;
+
+.card p {
+    font-size: 10px;
+}
+
+.release-games {
+    border: 2px saddlebrown solid;
+
 }
