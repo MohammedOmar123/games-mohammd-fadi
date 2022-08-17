@@ -4,6 +4,7 @@ const shooterSection = document.querySelector('.shooter');
 const strategySection = document.querySelector('.strategy');
 const racingSection = document.querySelector('.racing');
 const releaseSection = document.querySelector('.release-games');
+const searchBtn = document.querySelector('#send');
 
 const createOption = (data) => {
   const option = document.createElement('option');
@@ -18,7 +19,7 @@ const printResults = (suggestionsList) => {
   });
 };
 
-const handelAutoComplete = ()=> {
+const handelAutoComplete = () => {
   const header = {
     method: 'POST',
     body: JSON.stringify({
@@ -35,6 +36,9 @@ const handelAutoComplete = ()=> {
       printResults(data);
     }).catch(console.log);
 };
+
+searchBar.addEventListener('input', handelAutoComplete);
+
 
 const createGamesViews = (game,section) => {
   const div = document.createElement('div');
