@@ -11,8 +11,11 @@
 
 <body>
     <label for="search">Search</label>
-    <input type="text" name="search" id="search">
+    <input list="games" class="search-input" type="text" name="search" id="search">
     <button id="send">Submit</button>
+    <datalist id="games">
+
+    </datalist>
 
     <section class="Games-categories">
         <section class="shooter">
@@ -25,7 +28,7 @@
             <h2>Racing</h2>
         </section>
     </section>
-
+    
     <script src="./home/index.js"></script>
 </body>
 
