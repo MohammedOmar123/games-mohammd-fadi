@@ -1,4 +1,13 @@
 /* The main container  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&family=Rubik+Dirt&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: rgb(18,18,18);
+}
 .Games-categories {
     display: flex;
     border: 2px saddlebrown solid;
@@ -31,3 +40,71 @@
     border: 2px saddlebrown solid;
 
 }
+
+/* Beginning of header */
+.header{
+    height: 3.2rem;
+    background-color: rgb(42,42,42);
+    display: flex;
+    color: rgb(204,204,204);
+}
+.items {
+    padding: 1rem;
+}
+
+.items ul li  {
+    display: inline;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 1.3rem;
+}
+.items ul li a {
+    text-decoration: none;
+}
+.current-li{
+    color: rgb(52,120,246);
+    font-weight: bold;
+}
+
+/* End of header */
+
+/* Begining of search section */
+.search{
+    width: 80%;
+    border-radius: 1rem;
+    height: 3.4rem;
+    background-color: rgb(32,32,32);
+    margin: 0 auto;
+}
+.form{
+    padding: 0.5rem;
+}
+.search form {
+    height: 100%;
+    border: none;
+    padding: 0.5rem;
+    border: nopne;
+}
+.search form input {
+    width: 70%;
+    height: 70%;
+    border: none;
+    background-color: rgb(32,32,32);
+    color: rgb(204,204,204);
+    font-size: 1.2rem;
+    padding: 0 1rem;
+}
+#search:focus {
+     outline: none !important;
+}
+.search form button {
+    width: 18%;
+    height: 70%;
+    background-color: rgb(32,32,32);
+    border: none;
+    color: rgb(204,204,204);
+    font-size: 1.2rem;
+    padding: 0 1rem;
+}
+/* End of searh section */
+

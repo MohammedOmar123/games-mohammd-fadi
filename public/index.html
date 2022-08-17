@@ -8,16 +8,30 @@
     <link rel="stylesheet" href="./home/styles.css">
     <title>Steem Games</title>
 </head>
-
 <body>
-    <form action="/game" method="POST">
-    <label for="search">Search</label>
-    <input list="games" class="search-input" type="text" name="search" id="search">
-    <button id="send">Submit</button>
-    <datalist id="games">
+    <section class="header">
+        <nav class="items">
+            <ul>
+                <li class="current-li"><a class="anchor">Home</a></li>
+                <li><a>PC</a></li>
+                <li><a>Web</a></li>
+            </ul>
+        </nav>
+    </section>
 
-    </datalist>
-   </form> 
+    <br>
+
+    <div class="search">
+        <div class="form">
+        <form action="/game" method="POST">
+            <input list="games" class="search-input" type="text" name="search" id="search" placeholder="search for a game">
+            <button id="send">Search</button>
+            <datalist id="games"></datalist>
+        </form> 
+    </div>
+    </div>
+    
+<br>
 
     <section class="release-games">
 
