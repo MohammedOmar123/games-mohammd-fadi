@@ -1,3 +1,4 @@
 const getHome = require('./getHome');
+const getSearchValue = require('./search');
 
-module.exports = getHome;
+module.exports = { getHome, getSearchValue };
