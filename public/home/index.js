@@ -17,23 +17,23 @@ const printResults = (suggestionsList) => {
   });
 };
 
-searchBar.addEventListener('input', () => {
-  fetch('/handel-search', {
+const handelAutoComplete = ()=> {
+  const header = {
     method: 'POST',
     body: JSON.stringify({
       searchValue: searchBar.value,
     }),
     headers: {
-      "Content-type": "application/json; charset=UTF-8"
+      'Content-type': 'application/json; charset=UTF-8',
     },
-  })
+  };
+  fetch('/handel-search', header)
     .then((data) => data.json())
     .then((data) => {
       dataList.textContent = '';
       printResults(data);
-    });
-});
-
+    }).catch(console.log);
+};
 
 const createGamesViews = (game,section) => {
   const div = document.createElement('div');
