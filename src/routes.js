@@ -1,7 +1,8 @@
 const router = require('express').Router();
-const {getHome, getSearchValue } = require('./controllers');
+const {getSearchValue, getGame, gamePage } = require('./controllers');
 
-router.get('/', getHome);
 router.post('/handel-search', getSearchValue);
+router.post('/game', getGame);
+router.get('/game/:id', gamePage);
 
 module.exports = router;

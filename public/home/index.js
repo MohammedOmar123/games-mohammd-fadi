@@ -1,5 +1,6 @@
 const searchBar = document.querySelector('.search-input');
 const dataList = document.querySelector('#games');
+const searchBtn = document.querySelector('.send');
 
 const createOption = (data) => {
   const option = document.createElement('option');
@@ -15,19 +16,28 @@ const printResults = (suggestionsList) => {
   });
 };
 
-searchBar.addEventListener('input', () => {
-  fetch('/handel-search', {
+const handelAutoComplete = ()=> {
+  const header = {
     method: 'POST',
     body: JSON.stringify({
       searchValue: searchBar.value,
     }),
     headers: {
-      "Content-type": "application/json; charset=UTF-8"
+      'Content-type': 'application/json; charset=UTF-8',
     },
-  })
+  };
+  fetch('/handel-search', header)
     .then((data) => data.json())
     .then((data) => {
       dataList.textContent = '';
       printResults(data);
     });
-});
+};
+
+const handelSearchBtn = () => {
+  console.log("clicked");
+};
+
+searchBar.addEventListener('input', handelAutoComplete);
+
+searchBtn.addEventListener('click', handelSearchBtn);
