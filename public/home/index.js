@@ -3,6 +3,7 @@ const dataList = document.querySelector('#games');
 const shooterSection = document.querySelector('.shooter');
 const strategySection = document.querySelector('.strategy');
 const racingSection = document.querySelector('.racing');
+const releaseSection = document.querySelector('.release-games');
 
 const createOption = (data) => {
   const option = document.createElement('option');
@@ -62,3 +63,14 @@ const requestGamesCategory = (categoryName, section) => {
 requestGamesCategory('strategy', strategySection);
 requestGamesCategory('shooter', shooterSection);
 requestGamesCategory('racing', racingSection);
+
+const requestGamesByReleaseDate = (section) => {
+  fetch('games/latestRelease').then((data) => data.json()).then((games) => {
+    const data = games.slice(0, 7);
+    data.map((game) => {
+      createGamesViews(game, section);
+    });
+  }).catch(console.log)
+};
+
+requestGamesByReleaseDate(releaseSection);
