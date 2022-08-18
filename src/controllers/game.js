@@ -1,3 +1,4 @@
+const path = require('path');
 const fetch = require('node-fetch');
 
 const seatchForInObject = (arr, searchTerm) => {
@@ -9,10 +10,8 @@ const seatchForInObject = (arr, searchTerm) => {
 };
 
 const getGame = (req, res) => {
-  fetch('https://www.freetogame.com/api/games').then((data) => data.json())
-    .then((data) => seatchForInObject(data, req.body.search))
-    .then((data) => res.redirect(`/game/${data}`))
-    .catch((err) => console.log(err));
+  const gamePath = path.join(__dirname, '..', '..', 'public', 'pages', 'game', 'index.html');
+  res.sendFile(gamePath);
 };
 
 const gamePage = (req, res) => {

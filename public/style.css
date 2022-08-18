@@ -8,6 +8,10 @@
 body {
     background-color: rgb(18,18,18);
 }
+a{
+    text-decoration: none;
+    color: white;
+}
 
 /* Beginning of header */
 .header{
@@ -39,16 +43,21 @@ body {
 /* Main Page Card */
 .container {
     width: 90%;
-    margin: 0 auto;
+    margin: 3rem auto;
     background-color: rgb(32,32,32);
-    border: 1px solid white;
     border-radius: 2rem;
     display: flex;
     margin-bottom: 3rem;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 2px 0 rgba(14, 14, 14, 0.1), 0 6px 20px 0 rgba(14, 14, 14, 0.19);
 }
+.container h1 {
+   color: rgb(52,120,246);
+   font-size: 2rem;
+   font-family: 'Rubik Dirt', sans-serif;
 
+}
 .big-pics{
+    width: 70%;
     flex-direction: column;
     justify-content: start;
     align-items: start;
@@ -56,12 +65,11 @@ body {
     justify-content: start;
     padding: 3rem;
     align-items: start;
-
 }
 
 .big-pics img {
-    width: 40rem;
-    height: 30rem;
+    width: 50rem;
+    height: 27rem;
     border-radius: 2rem;
 }
 
@@ -73,11 +81,12 @@ body {
 }
 
 .right-section{
+    display: 1;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    padding: 3rem;
+    padding: 5rem 3rem;
     color: white;
     font-size: 1.3rem;
     width: 100%;
@@ -109,6 +118,67 @@ body {
     margin: 1rem;
     cursor: pointer;
 }
-
+.right-section a {
+    text-decoration: none;
+    color: white;
+}
+.right-section a:hover{
+    background-color: white;
+    color: rgb(52,120,246);
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 3rem;
+    font-size: 1.2rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+a:hover {
+    background-color: rgb(52,120,246);
+    color: white;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
 /* End of Game Sections */
+/* Game info Section */
+.game-info {
+    width: 90%;
+    margin: 3rem auto;
+    background-color: rgb(32,32,32);
+    border-radius: 2rem;
+    margin-bottom: 3rem;
+    color: white;
+    box-shadow: 0 2px 2px 0 rgba(14, 14, 14, 0.1), 0 6px 20px 0 rgba(14, 14, 14, 0.19);
+}
+.game-info h1 {
+    padding: 2rem 2rem 0 2rem;
+    font-size: 2rem;
+    color: rgb(52,120,246);
+    font-weight: bold;
+}
+
+.game-info p {
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.game-info ul {
+    padding: 0 5rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.game-info ul li {
+    list-style: square;
+    padding: 0.5rem 0;
+}
+
+.game-info img{
+    border-radius: 1rem;
+    margin: 1rem;
+    width: 30%;
+    height: 30%;
+
+}
+
+/* End of game info section */
 
