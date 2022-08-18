@@ -13,43 +13,53 @@
         <nav class="items">
             <ul>
                 <li class="current-li"><a class="anchor">Home</a></li>
-                <li><a>PC</a></li>
-                <li><a>Web</a></li>
+                <li><a href="./pages/gamePlatform/index.html">PC</a></li>
+                <li><a href="./pages/gamePlatform/browzer.html">Web</a></li>
             </ul>
         </nav>
     </section>
 
-    <br>
-
-    <div class="search">
-        <div class="form">
-        <form action="/game" method="POST">
-            <input list="games" class="search-input" type="text" name="search" id="search" placeholder="search for a game">
-            <button id="send">Search</button>
+    <div class="search-container">
+        <div class="search-input">
+            <input list="games" class="search-input-bar" type="text" id="search" placeholder="search for a game">
             <datalist id="games"></datalist>
-        </form> 
+        </div>
+        <div class="search-btn">
+            <button type="submit" id="send">Search</button>
+        </div>
     </div>
-    </div>
+
+    <h1 class="error-title"></h1>
     
 <br>
 
+<h1 class="section-title">Featured Games:</h1>
 <section class="container">
-    
     <section class="big-pics">
-       <img src="https://i.pinimg.com/originals/32/fc/db/32fcdbc2bf737dbd3fe8fc4e82902dc8.png" alt=""> 
-    </section>
-
+       <img class="thumbnail" src="https://www.freetogame.com/g/1/dauntless-1.jpg">
+       </section>
     <section class="right-section">
-        <!-- <div><a href=""><img src="https://www.freetogame.com/g/508/thumbnail.jpg" alt=""></a><p>Pics1</p></div>
-        <div><a href=""><img src="https://www.freetogame.com/g/345/thumbnail.jpg" alt=""></a><p>Pics2</p></div>
-        <div><a><img src="https://www.freetogame.com/g/427/thumbnail.jpg" alt=""></a><p>Pics3</p></div> -->
     </section>
-    
+</section>
+<h1 class="section-title">Stratgic:</h1>
+<section class="stratgic-container cate-container">
 
+</section>
+
+<h1 class="section-title">Shooter:</h1>
+<section class="shooter-container cate-container">
+
+</section>
+
+<h1 class="section-title">Car Racing:</h1>
+<section class="racing-container cate-container">
 
 </section>
 
 
+<section class="cate-container">
+
+</section>
     <script src="./home/index.js"></script>
 </body>
 

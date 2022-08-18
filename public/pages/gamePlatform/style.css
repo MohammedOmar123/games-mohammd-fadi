@@ -1,0 +1,99 @@
+/* The main container  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&family=Rubik+Dirt&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: rgb(18,18,18);
+}
+a{
+    text-decoration: none;
+}
+
+.anchor {
+    background-color: rgb(52,120,246);
+    color: white;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+.items ul li a:hover {
+    background-color: white;
+    color: rgb(52,120,246);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Beginning of header */
+.header{
+    height: 3.2rem;
+    background-color: rgb(42,42,42);
+    display: flex;
+    color: rgb(204,204,204);
+}
+.items {
+    padding: 1rem;
+}
+
+.items ul li  {
+    display: inline;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 1.3rem;
+}
+.items ul li a {
+    color: white;
+    text-decoration: none;
+}
+.current-li{
+    color: rgb(52,120,246);
+    font-weight: bold;
+}
+/* End of header */
+/* Main Page Card */
+.container{
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(32,32,32);
+    border-radius: 2rem;
+    display: flex;
+    margin: 1rem 3rem;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: white;
+}
+.container img{
+    border-radius: 1rem;
+}
+
+.container img:hover{
+    opacity: 0.6;
+}
+.card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 0.7rem;
+    font-weight: bold;
+}
+
+.card a:hover{
+    font-size: 1.2rem;
+    margin-top: 0.7rem;
+    font-weight: bold;
+    color: rgb(52,120,246);
+}
+
+h1 {
+    color: white;
+    font-size: 2rem;
+    padding: 3rem 3rem 0rem 3rem;
+}
+

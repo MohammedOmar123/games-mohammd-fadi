@@ -3,6 +3,8 @@ const getSearchValue = require('./search');
 const { getGame, gamePage } = require('./game');
 const getLatestReleaseGames = require('./getLatestReleaseGames');
 const getGamesPlaltform = require('./getGamesPlaltform');
+const handelSearch = require('./handelSearch');
+const { clientErrors, serverErrors } = require('./error');
 
 module.exports = {
   getSearchValue,
@@ -11,4 +13,7 @@ module.exports = {
   getGamesFromCategory,
   getLatestReleaseGames,
   getGamesPlaltform,
+  handelSearch,
+  clientErrors,
+  serverErrors,
 };
